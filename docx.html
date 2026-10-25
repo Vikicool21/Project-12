@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Weather App Homepage</title>
+ 
+  <style>
+    /* Universal selector: applies basic settings to the full page */
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+ 
+    /* Body background uses colour, image pattern, repeat, position, and attachment */
+    body {
+      margin: 0;
+      padding: 30px 20px;
+      background: linear-gradient(to bottom, #7ec8ff, #4aa8ff 45%, #dff4ff);
+      background-image: radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 3px);
+      background-size: 38px 38px;
+      background-repeat: repeat;
+      background-position: top center;
+      background-attachment: fixed;
+      color: white;
+      text-align: center;
+    }
+ 
+    h1 {
+      margin-top: 0;
+      font-size: 36px;
+      color: white;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    }
+ 
+    .subtitle {
+      font-size: 18px;
+      color: #f0f8ff;
+      margin-bottom: 28px;
+    }
+ 
+    .weather-card {
+      width: min(92vw, 400px);
+      margin: 0 auto 30px;
+      padding: 18px 14px 10px;
+      border: 3px solid rgba(255,255,255,0.8);
+      border-radius: 22px;
+      background-image: linear-gradient(to bottom right, #1e90ff, #87cefa);
+      box-shadow: 0 10px 25px rgba(30, 110, 175, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .weather-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(30, 110, 175, 0.32);
+    }
+ 
+    .weather-icon {
+      font-size: 70px;
+      animation: floatCloud 3s infinite alternate;
+      text-shadow: 0 8px 18px rgba(255,255,255,0.3);
+    }
+ 
+    #temperature {
+      margin: 10px 0;
+      font-size: 48px;
+      font-weight: bold;
+      color: #fffacd;
+    }
+ 
+    .details {
+      font-size: 18px;
+      color: white;
+      margin: 8px 0;
+    }
+ 
+    .forecast-section {
+      width: min(92vw, 600px);
+      margin: 0 auto;
+      padding: 16px 18px 12px;
+      border: 3px solid rgba(255,255,255,0.8);
+      border-radius: 18px;
+      background-image: radial-gradient(circle, white, #add8e6);
+      color: #003366;
+      box-shadow: 0 8px 18px rgba(57, 118, 165, 0.18);
+    }
+ 
+    .forecast-title {
+      color: #003366;
+      margin-top: 0;
+    }
+ 
+    .day {
+      padding: 10px 12px;
+      margin: 10px 0;
+      border: 2px solid #4682b4;
+      border-radius: 10px;
+      font-size: 17px;
+      color: #003366;
+      background: rgba(255,255,255,0.35);
+    }
+ 
+    /* Group selector: styles both headings together */
+    h2, h3 {
+      color: white;
+    }
+ 
+    /* CSS animation using @keyframes */
+    @keyframes floatCloud {
+      from {
+        transform: translateY(0);
+      }
+ 
+      to {
+        transform: translateY(20px);
+      }
+    }
+  </style>
+</head>
+ 
+<body>
+ 
+  <h1>My Weather App Homepage</h1>
+ 
+  <p class="subtitle">
+    Stay ahead of the weather and plan your day with confidence.
+  </p>
+
+  <div class="weather-card">
+    <h2>Today's Weather</h2>
+
+    <div class="weather-icon">Cloud</div>
+
+    <p id="temperature">28°C</p>
+
+    <p class="details">City: Bengaluru</p>
+    <p class="details">Condition: Partly Cloudy</p>
+    <p class="details">Feels Like: 30°C</p>
+    <p class="details">Humidity: 62%</p>
+    <p class="details">Wind Speed: 12 km/h</p>
+  </div>
+ 
+  <h2>Weekly Forecast</h2>
+ 
+  <div class="forecast-section">
+    <h3 class="forecast-title">Next 5 Days</h3>
+ 
+    <p class="day">Monday: Sunny - 30°C</p>
+    <p class="day">Tuesday: Cloudy - 27°C</p>
+    <p class="day">Wednesday: Rainy - 24°C</p>
+    <p class="day">Thursday: Windy - 26°C</p>
+    <p class="day">Friday: Stormy - 23°C</p>
+  </div>
+ 
+</body>
+</html>
